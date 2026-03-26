@@ -15,4 +15,9 @@
 
 Questions:
 - How does Spark infer schema?
+    - Spark data scan karta hai
+    - Har column ka datatype guess karta hai
 - What happens if inferSchema=False?
+    - Sab columns → string ban jaate hain
+    - Performance fast hoti hai, but accuracy low
+
