@@ -1,0 +1,18 @@
+- Load CSV/JSON into DataFrame
+  - superstore_sales_data
+
+- Show top 10 rows
+    - display(df.limit(10))
+    - df.show(10, vertical=True)
+
+- Print schema
+  - df.printSchema()
+  - It Shows the column names and dataTypes
+
+- Count total records
+  - df.count()
+  - Counts exactly how many rows are there in your dataset
+
+Questions:
+- How does Spark infer schema?
+- What happens if inferSchema=False?
