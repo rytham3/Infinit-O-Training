@@ -1,1 +1,15 @@
-intro
+"""
+from pyspark.sql.functions import isnull
+df.select([isnull(c).alias(c) for c in df.columns]).show()
+"""
+- Note: While this is great for a quick visual check with .show(), it's not very helpful for massive datasets with millions of rows (you can't scroll through a million "falses").
+
+
+Better approach:
+from pyspark.sql.functions import col, count, when
+
+# This counts how many nulls exist per column
+df.select([count(when(isnull(c), c)).alias(c) for c in df.columns]).show()
+-----------
+
+
